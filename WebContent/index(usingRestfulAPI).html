@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>To-Do List Mania (REST)</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body class="index-bodyFont">
+	<h1 class="spotlight">To-Do List Mania</h1><br>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="index(usingRestfulAPI).js"></script>
+	
+	<form name ="userLogin" action="">
+	Enter your ID if you're a returning user<br>
+	Otherwise, type 0:<br> 
+	<input type="text" id="login_ID" name="login_ID"><br>
+	<input type="button" class="whiteButtonIndex" value="Enter" onclick="performGetRequest();">
+	<div class="listFont2" id="toDoListResult"></div>
+	</form>
+	
+</body>
+</html>

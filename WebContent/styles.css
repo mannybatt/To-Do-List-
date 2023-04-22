@@ -1,0 +1,279 @@
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("http://fonts.googleapis.com/css?family=Lobster+Two");
+
+
+/* Index Styles */
+
+.index-bodyFont {
+	padding-top: 325px;
+    background-image: url("index-background.jpg");
+    background-color: #000000;
+    background-position: center;
+    background-attachment: fixed;    
+    max-width: 720px;
+    margin: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.spotlight {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animateSpotlight 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animateSpotlight {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.whiteButtonIndex {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #000000;
+    border: solid 2px #000000;
+    border-radius: 3px;
+    transition: .4s;
+}
+.whiteButtonIndex:hover {
+    background: #000000;
+    color: white;
+    border: solid 2px #ffffff;
+}
+
+
+/* Login Redirect Styles */
+
+.loginRedirect-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glowing-Button {
+	font-size: 2em;
+	font-family: "Source Sans Pro", sans-serif;
+    width: 520px;
+    height: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.glowing-Button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingButton 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.glowing-Button:active {
+    color: #000
+}
+.glowing-Button:active:after {
+    background: transparent;
+}
+.glowing-Button:hover:before {
+    opacity: 1;
+}
+.glowing-Button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowingButton {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* Welcome Styles */
+
+.rainbow-text {
+    background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    background-size: 40% 40%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    text-shadow: 3px 3px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+    font-size: 50pt;
+    animation: rainbow 7s ease infinite;
+  }
+  @keyframes rainbow { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position: 0% 50%}
+}
+
+.welcome-bodyFont {
+	padding-top: 40px;
+    background-image: url("welcome-background.jpg");
+    background-color: #000000;
+    background-position: center;
+    background-attachment: fixed;    
+    max-width: 720px;
+    margin: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.sub{
+	font:Helvetica;
+	text-shadow: 1px 0px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+.listFont{
+	font-size: 14pt;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.listFont2{
+	font-size: 14pt;
+	font-family: "Source Sans Pro", sans-serif;
+	color: white;
+}
+
+.glowing-ButtonSmall {
+	font-size: 14pt;
+	font-family: "Source Sans Pro", sans-serif;
+    width: 135px;
+    height: 27px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.glowing-ButtonSmall:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingButtonSmall 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.glowing-ButtonSmall:active {
+    color: #000
+}
+.glowing-ButtonSmall:active:after {
+    background: transparent;
+}
+.glowing-ButtonSmall:hover:before {
+    opacity: 1;
+}
+.glowing-ButtonSmall:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowingButtonSmall {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* Save Screen Styles */
+
+.saveCentering{
+	padding-top: 40px;
+    background-image: url("save-background.jpg");
+    background-color: #000000;
+    background-position: center;
+    background-attachment: fixed;    
+    max-width: 720px;
+    margin: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.thanks{
+  font: 400 65px/1.3 'Lobster Two', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+.thanks2{
+  font: 400 30px/1.3 'Lobster Two', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+.whiteButton {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #000000;
+    border: solid 2px #000000;
+    border-radius: 3px;
+    transition: .4s;
+}
+.whiteButton:hover {
+    background: #000000;
+    color: white;
+}
+
+
